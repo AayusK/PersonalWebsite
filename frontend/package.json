@@ -1,7 +1,7 @@
 {
   "name": "personal-website-frontend",
   "private": true,
-  "homepage": "https://aayusk.github.io/Personal-Website/",
+  "homepage": "https://aayusk.github.io/Personal-Website/frontend/index.html",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
