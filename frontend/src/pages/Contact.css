@@ -18,12 +18,12 @@
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.126);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.256);
   transition: transform 0.3s ease;
 }
 
@@ -39,7 +39,7 @@
 .info-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #ffd700;
+  color: #004225;
 }
 
 .info-card p {
@@ -63,7 +63,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #ffd700;
+  color: #004225;
 }
 
 .form-group input,
@@ -96,7 +96,7 @@
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #004225 70%);
   color: white;
   padding: 0.75rem 2rem;
   border: none;
