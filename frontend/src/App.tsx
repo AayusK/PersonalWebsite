@@ -1,3 +1,4 @@
+// frontend/src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
@@ -7,7 +8,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Personal-Website"> {/* ADD basename */}
       <div className="App">
         <Header />
         <Routes>
@@ -22,5 +23,3 @@ function App() {
 }
 
 export default App
-
-
