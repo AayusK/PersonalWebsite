@@ -6,7 +6,14 @@ from datetime import datetime
 from contextlib import closing
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://aayusk.github.io",
+            "http://localhost:3000"  # For local development
+        ]
+    }
+})
 
 # Database configuration
 DATABASE = 'contact_messages.db'
