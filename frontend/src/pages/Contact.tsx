@@ -17,29 +17,30 @@ function Contact() {
     })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('Sending...')
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setStatus('Sending...')
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+  try {
+    // Using Formspree (sign up at formspree.io and get your form ID)
+    const response = await fetch('https://personalwebsite-kxdp.onrender.com/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
 
-      if (response.ok) {
-        setStatus('Message sent successfully!')
-        setFormData({ name: '', email: '', subject: '', message: '' })
-      } else {
-        setStatus('Failed to send message. Please try again.')
-      }
-    } catch (error) {
-      setStatus('An error occurred. Please try again later.')
+    if (response.ok) {
+      setStatus('Message sent successfully!')
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    } else {
+      setStatus('Failed to send message. Please try again.')
     }
+  } catch (error) {
+    setStatus('An error occurred. Please try again later.')
   }
+}
 
   return (
     <div className="contact">
