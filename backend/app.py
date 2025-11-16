@@ -6,10 +6,15 @@ from datetime import datetime
 from contextlib import closing
 
 app = Flask(__name__)
+
+# CORS configuration for aayuskeshri.com
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://aayusk.github.io",
+            "https://aayuskeshri.com",
+            "https://www.aayuskeshri.com",
+            "http://aayuskeshri.com",
+            "http://www.aayuskeshri.com",
             "http://localhost:3000"  # For local development
         ]
     }
@@ -107,5 +112,3 @@ def health():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
-
-
