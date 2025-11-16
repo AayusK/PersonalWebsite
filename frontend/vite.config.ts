@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Personal-Website/', // KEEP THIS for GitHub Pages
+  base: '/', // Changed from '/Personal-Website/' 
   build: {
     outDir: 'dist'
   },
@@ -12,7 +12,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // Only for local development
+        target: 'http://localhost:5000',
         changeOrigin: true
       }
     }

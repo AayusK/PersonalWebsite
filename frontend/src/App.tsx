@@ -8,7 +8,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <Router basename="/Personal-Website"> {/* ADD basename */}
+    <Router basename="/"> {/* Changed from '/Personal-Website/' */}
       <div className="App">
         <Header />
         <Routes>

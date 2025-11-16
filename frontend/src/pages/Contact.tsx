@@ -23,13 +23,13 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   try {
     // Using Formspree (sign up at formspree.io and get your form ID)
-    const response = await fetch('https://personalwebsite-kxdp.onrender.com/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
+    const response = await fetch('https://personalwebsite-kxdp.onrender.com', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
 
     if (response.ok) {
       setStatus('Message sent successfully!')
