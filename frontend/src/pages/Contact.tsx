@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './Contact.css'
+import githubImage from 'frontend\public\images\github.png';
+import gmailImage from 'frontend\public\images\gmail.png';
+import linkedinImage from 'frontend\public\images\linkedin.png'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -53,17 +56,17 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-card">
-              <div className="info-icon">📧</div>
+              <img>gmailImage</img>
               <h3>Email</h3>
               <p>Aayus.keshri@gmail.com</p>
             </div>
             <div className="info-card">
-              <div className="info-icon">💼</div>
+              <img>linkedinImage</img>
               <h3>LinkedIn</h3>
               <p>linkedin.com/in/aayus-keshri</p>
             </div>
             <div className="info-card">
-              <div className="info-icon">🐙</div>
+              <img>githubImage</img>
               <h3>GitHub</h3>
               <p>github.com/AayusK</p>
             </div>
