@@ -94,7 +94,15 @@ function Contact() {
             </button>
 
             {state.succeeded && (
-              <div className="status-message">Message sent successfully!</div>
+              <div className="status-message" style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid #555' }}>
+                Message sent! I'll get back to you soon.
+              </div>
+            )}
+
+            {state.errors && Array.isArray(state.errors) && state.errors.length > 0 && (
+              <div className="status-message" style={{ background: 'rgba(255, 0, 0, 0.1)', color: '#ff6b6b', border: '1px solid #ff6b6b' }}>
+                There was an error sending your message. Please try again.
+              </div>
             )}
           </form>
         </div>
