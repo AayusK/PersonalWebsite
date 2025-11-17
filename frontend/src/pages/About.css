@@ -8,8 +8,8 @@
   font-size: 3rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: #004225;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about-content {
@@ -19,24 +19,26 @@
 }
 
 .section {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 20px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
 
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #E0FFB3;
+  color: #ffffff;
 }
 
 .section p {
   font-size: 1.1rem;
   line-height: 1.8;
-  opacity: 0.95;
+  opacity: 0.9;
+  color: #cccccc;
 }
 
 .skills-grid {
@@ -47,20 +49,23 @@
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(40, 40, 40, 0.8);
   padding: 1.5rem;
   border-radius: 15px;
   transition: transform 0.3s ease;
+  border: 1px solid #444;
 }
 
 .skill-category:hover {
   transform: translateY(-5px);
+  border-color: #666;
+  background: rgba(50, 50, 50, 0.9);
 }
 
 .skill-category h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #E6FFF5;
+  color: #ffffff;
 }
 
 .skill-category ul {
@@ -69,16 +74,17 @@
 
 .skill-category li {
   padding: 0.5rem 0;
-  opacity: 0.95;
+  opacity: 0.9;
   position: relative;
   padding-left: 1.5rem;
+  color: #aaaaaa;
 }
 
 .skill-category li::before {
   content: '▸';
   position: absolute;
   left: 0;
-  color: #ffd700;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -98,5 +104,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-

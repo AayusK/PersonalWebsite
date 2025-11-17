@@ -4,15 +4,24 @@
   color: white;
 }
 
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .page-subtitle {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 3rem;
-  opacity: 0.9;
+  opacity: 0.8;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
+  color: #aaaaaa;
 }
 
 .projects-grid {
@@ -25,30 +34,32 @@
 }
 
 .project-card {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid #333;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+  border-color: #555;
 }
 
 .project-header {
-  background: #004225;
+  background: #1a1a1a;
   padding: 1.5rem;
-  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+  border-bottom: 2px solid #333;
 }
 
 .project-header h3 {
   font-size: 1.5rem;
-  color: #E6FFF5;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -61,7 +72,8 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  opacity: 0.95;
+  opacity: 0.9;
+  color: #cccccc;
 }
 
 .project-tech {
@@ -71,22 +83,22 @@
 }
 
 .tech-tag {
-  background: #004225;
-  color: #E6FFF5;
+  background: #333333;
+  color: #ffffff;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #555;
 }
 
 .project-footer {
   padding: 1.5rem;
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid #333;
 }
 
 .project-link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -94,7 +106,7 @@
 }
 
 .project-link:hover {
-  color: #ffd700;
+  color: #cccccc;
   transform: translateX(5px);
 }
 

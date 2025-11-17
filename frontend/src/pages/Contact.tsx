@@ -1,46 +1,8 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import './Contact.css'
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-  const [status, setStatus] = useState('')
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  setStatus('Sending...')
-
-  try {
-    // Using Formspree (sign up at formspree.io and get your form ID)
-    const response = await fetch('https://personalwebsite-kxdp.onrender.com', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-
-    if (response.ok) {
-      setStatus('Message sent successfully!')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    } else {
-      setStatus('Failed to send message. Please try again.')
-    }
-  } catch (error) {
-    setStatus('An error occurred. Please try again later.')
-  }
-}
+  const [state, handleSubmit] = useForm("xgvrrnja")
 
   return (
     <div className="contact">
@@ -53,19 +15,16 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-card">
-              <div className="info-icon">📧</div>
-              <h3>Email</h3>
-              <p>Aayus.keshri@gmail.com</p>
+              <img src="/images/gmail.png" alt="Gmail" style={{background: 'transparent'}}/>
+              <p><a href="aayus.keshri@gmail.com">aayus.keshri@gmail.com</a></p>
             </div>
             <div className="info-card">
-              <div className="info-icon">💼</div>
-              <h3>LinkedIn</h3>
-              <p>linkedin.com/in/aayus-keshri</p>
+              <img src="/images/linkedin.png" alt="LinkedIn" />
+              <p><a href="linkedin.com/in/aayus-keshri">linkedin.com/in/aayus-keshri</a></p>
             </div>
             <div className="info-card">
-              <div className="info-icon">🐙</div>
-              <h3>GitHub</h3>
-              <p>github.com/AayusK</p>
+              <img src="/images/github.png" alt="GitHub" />
+              <p><a href="github.com/AayusK">github.com/AayusK</a></p>
             </div>
           </div>
 
@@ -76,9 +35,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 required
+              />
+              <ValidationError 
+                prefix="Name" 
+                field="name"
+                errors={state.errors}
               />
             </div>
 
@@ -88,9 +50,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 required
+              />
+              <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
               />
             </div>
 
@@ -100,9 +65,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
                 required
+              />
+              <ValidationError 
+                prefix="Subject" 
+                field="subject"
+                errors={state.errors}
               />
             </div>
 
@@ -112,17 +80,22 @@ const handleSubmit = async (e: React.FormEvent) => {
                 id="message"
                 name="message"
                 rows={6}
-                value={formData.message}
-                onChange={handleChange}
                 required
               ></textarea>
+              <ValidationError 
+                prefix="Message" 
+                field="message"
+                errors={state.errors}
+              />
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={state.submitting}>
+              {state.submitting ? 'Sending...' : 'Send Message'}
             </button>
 
-            {status && <div className="status-message">{status}</div>}
+            {state.succeeded && (
+              <div className="status-message">Message sent successfully!</div>
+            )}
           </form>
         </div>
       </div>
@@ -131,5 +104,3 @@ const handleSubmit = async (e: React.FormEvent) => {
 }
 
 export default Contact
-
-

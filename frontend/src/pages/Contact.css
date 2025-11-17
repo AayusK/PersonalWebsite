@@ -18,17 +18,27 @@
 }
 
 .info-card {
-  background: rgba(0, 0, 0, 0.126);
+  background: rgba(40, 40, 40, 0.8);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.256);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
+  border: 1px solid #333;
+}
+
+.info-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .info-card:hover {
   transform: translateY(-10px);
+  border-color: #555;
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
 }
 
 .info-icon {
@@ -39,20 +49,22 @@
 .info-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #004225;
+  color: #ffffff;
 }
 
 .info-card p {
-  opacity: 0.9;
+  opacity: 0.8;
   font-size: 0.95rem;
+  color: #aaaaaa;
 }
 
 .contact-form {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(10px);
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
 
 .form-group {
@@ -63,31 +75,31 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #004225;
+  color: #ffffff;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #333;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: rgba(40, 40, 40, 0.8);
+  color: #ffffff;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ffd700;
-  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  background: rgba(50, 50, 50, 0.9);
 }
 
 .form-group textarea {
@@ -96,8 +108,8 @@
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #000000 0%, #004225 70%);
-  color: white;
+  background: #ffffff;
+  color: #000000;
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 50px;
@@ -110,7 +122,8 @@
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  background: #f0f0f0;
 }
 
 .status-message {
@@ -119,8 +132,9 @@
   border-radius: 10px;
   text-align: center;
   font-weight: 600;
-  background: rgba(255, 215, 0, 0.2);
-  color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid #555;
 }
 
 @media (max-width: 768px) {
@@ -131,6 +145,14 @@
   .contact-info {
     grid-template-columns: 1fr;
   }
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #cccccc;
 }
 
 

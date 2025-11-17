@@ -1,9 +1,10 @@
 .header {
-  background: #b0af9e;
+  background: #1a1a1a;
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
 .container {
@@ -22,13 +23,13 @@
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #004225;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .logo a:hover {
-  color: #2f7e57;
+  color: #cccccc;
 }
 
 .nav-links {
@@ -38,7 +39,7 @@
 }
 
 .nav-links a {
-  color: #004225;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -52,7 +53,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #000000;
+  background: #ffffff;
   transition: width 0.3s ease;
 }
 
@@ -63,7 +64,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #2f7e57;
+  color: #cccccc;
 }
 
 @media (max-width: 768px) {

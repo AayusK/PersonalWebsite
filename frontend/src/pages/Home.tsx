@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
 
+
 function Home() {
   return (
     <div className="home">
       <div className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Aayus Keshri</span>
+            Hi, I'm <span className="gradient-text">Aayus Keshri</span>
           </h1>
           <p className="hero-subtitle">
             Full Stack Developer | ECE Student @ tOSU 

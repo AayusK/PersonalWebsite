@@ -5,7 +5,7 @@
 .hero {
   padding: 4rem 0;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
 .hero-content {
@@ -22,22 +22,24 @@
 }
 
 .highlight {
-  color: #004225;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #cccccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  opacity: 1.0;
+  opacity: 0.9;
   font-weight: 300;
+  color: #cccccc;
 }
 
 .hero-description {
   font-size: 2rem;
   margin-bottom: 2.5rem;
-  opacity: 0.9;
+  opacity: 0.8;
   line-height: 1.8;
+  color: #aaaaaa;
 }
 
 .hero-buttons {
@@ -57,31 +59,33 @@
 }
 
 .btn-primary {
-  background: white;
+  background: #ffffff;
   color: #000000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  background: #f0f0f0;
 }
 
 .btn-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .btn-secondary:hover {
-  background: rgb(0, 0, 0);
+  background: #333333;
   color: #ffffff;
   transform: translateY(-2px);
+  border-color: #cccccc;
 }
 
 .features {
   padding: 4rem 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(26, 26, 26, 0.5);
   backdrop-filter: blur(10px);
 }
 
@@ -93,31 +97,35 @@
 }
 
 .feature-card {
-  background: white;
+  background: #1a1a1a;
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
+  border: 1px solid #333;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
+  border-color: #555;
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
 }
 
 .feature-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .feature-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .feature-card p {
-  color: #666;
+  color: #aaaaaa;
   line-height: 1.6;
 }
 
@@ -141,4 +149,9 @@
   }
 }
 
-
+.gradient-text {
+  background-image: linear-gradient(90deg, #12341d, #a4c1ad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
