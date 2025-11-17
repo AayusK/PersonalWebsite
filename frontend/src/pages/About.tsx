@@ -41,10 +41,26 @@ function About() {
                 <div className="skill-category">
                   <h3>Tools</h3>
                   <ul>
-                    <li>Git & GitHub</li>
+                    <li>Git</li>
                     <li>AWS</li>
                     <li>Direct2D</li>
                     <li>Google CoLab</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="section">
+              <h2>Certifications</h2>
+              <div className="skills-grid">
+                <div className="skill-category">
+                  <ul>
+                    <li><a href="https://courses.edx.org/certificates/336e1cd52bcb46cda28370d99c7324cf">CS50AI: Introduction to Artifical Intelligence with Python</a></li>
+                    <li><a href="https://courses.edx.org/certificates/84935e8c424a472eb415f397f4edea24">SQL for Data Science</a></li>
+                    <li><a href="https://courses.edx.org/certificates/4bce843bf1fb498da60592d4d4865d10">The Data Science Method</a></li>
+                    <li><a href="https://courses.edx.org/certificates/5190e7ce89834a70b226f8ea77778819">Data Science Tools</a></li>
                   </ul>
                 </div>
               </div>
