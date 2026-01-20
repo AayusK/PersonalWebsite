@@ -31,15 +31,15 @@ function Contact() {
           <div className="contact-info">
             <div className="info-card">
               <img src="/images/gmail.png" alt="Gmail" style={{ background: 'transparent' }} />
-              <p><a href="aayus.keshri@gmail.com">aayus.keshri@gmail.com</a></p>
+              <p><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">aayus.keshri@gmail.com</a></p>
             </div>
             <div className="info-card">
               <img src="/images/linkedin.png" alt="LinkedIn" />
-              <p><a href="linkedin.com/in/aayus-keshri">linkedin.com/in/aayus-keshri</a></p>
+              <p><a href="https://www.linkedin.com/in/aayus-keshri">linkedin.com/in/aayus-keshri</a></p>
             </div>
             <div className="info-card">
               <img src="/images/github.png" alt="GitHub" />
-              <p><a href="github.com/AayusK">github.com/AayusK</a></p>
+              <p><a href="https://github.com/AayusK">github.com/AayusK</a></p>
             </div>
           </div>
 
