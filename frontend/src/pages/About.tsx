@@ -1,19 +1,34 @@
 import './About.css'
+import PixelSnow from '../components/PixelSnow';
+
 
 function About() {
   return (
     <div className="about">
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
+        <PixelSnow
+          color="#ffffff"
+          flakeSize={0.01}
+          minFlakeSize={1.25}
+          pixelResolution={200}
+          speed={1.25}
+          density={0.3}
+          direction={125}
+          brightness={1}
+          style={{ height: '100%' }}
+        />
+      </div>
       <div className="container">
         <h1 className="page-title">About Me</h1>
-        
+
         <div className="about-content">
           <div className="about-text">
             <div className="section">
               <h2>Who I Am</h2>
               <p>
                 I'm a passionate ECE student at The Ohio State University, with a love for creating full stack solutions.
-                I'm interested in robotics, autonomous systems, and computer vision. I'm also currently working on a 
-                poker hand recognition project using computer vision and machine learning. 
+                I'm interested in robotics, autonomous systems, and computer vision. I'm also currently working on a
+                poker hand recognition project using computer vision and machine learning.
               </p>
             </div>
 
@@ -21,30 +36,41 @@ function About() {
               <h2>My Skills</h2>
               <div className="skills-grid">
                 <div className="skill-category">
-                  <h3>Frontend</h3>
+                  <h3>Languages</h3>
+                  <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>HTML/CSS</li>
+                    <li>SQL</li>
+                    <li>Matlab</li>
+                  </ul>
+                </div>
+                <div className="skill-category">
+                  <h3>Frameworks/Libraries</h3>
                   <ul>
                     <li>React</li>
-                    <li>TypeScript</li>
-                    <li>HTML5 & CSS3</li>
-                    <li>Responsive Design</li>
+                    <li>Flask</li>
+                    <li>OpenCV</li>
+                    <li>JUnit 4</li>
                   </ul>
                 </div>
                 <div className="skill-category">
-                  <h3>Backend</h3>
+                  <h3>Tools/Cloud</h3>
                   <ul>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>Java</li>
-                    <li>SQL</li>
-                  </ul>
-                </div>
-                <div className="skill-category">
-                  <h3>Tools</h3>
-                  <ul>
+                    <li>Linux</li>
+                    <li>AWS (EC2)</li>
                     <li>Git</li>
-                    <li>AWS</li>
-                    <li>Direct2D</li>
-                    <li>Google CoLab</li>
+                    <li>Roboflow</li>
+                  </ul>
+                </div>
+                <div className="skill-category">
+                  <h3>Embedded Systems</h3>
+                  <ul>
+                    <li>Arduino </li>
+                    <li>ESP32</li>
+                    <li>PWM</li>
+                    <li>BLE</li>
                   </ul>
                 </div>
               </div>
@@ -66,12 +92,7 @@ function About() {
               </div>
             </div>
 
-            <div className="section">
-              <h2>My Journey</h2>
-              <p>
-              My journey in computer science began back in fourth grade, when my dad gave me a Scratch tutorial book — a small moment that sparked a lasting curiosity about how technology works. Since then, I’ve explored programming through Python and C++, earned IBM’s Data Science Foundations Professional Certificate, and completed HarvardX’s Professional Certificate in Computer Science for Artificial Intelligence.
-              </p>
-            </div>
+
           </div>
         </div>
       </div>

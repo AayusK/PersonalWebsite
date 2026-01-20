@@ -1,11 +1,26 @@
 import { useForm, ValidationError } from '@formspree/react'
 import './Contact.css'
+import PixelSnow from '../components/PixelSnow';
+
 
 function Contact() {
   const [state, handleSubmit] = useForm("xgvrrnja")
 
   return (
     <div className="contact">
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
+        <PixelSnow
+          color="#ffffff"
+          flakeSize={0.01}
+          minFlakeSize={1.25}
+          pixelResolution={200}
+          speed={1.25}
+          density={0.3}
+          direction={125}
+          brightness={1}
+          style={{ height: '100%' }}
+        />
+      </div>
       <div className="container">
         <h1 className="page-title">Get In Touch</h1>
         <p className="page-subtitle">
@@ -15,7 +30,7 @@ function Contact() {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-card">
-              <img src="/images/gmail.png" alt="Gmail" style={{background: 'transparent'}}/>
+              <img src="/images/gmail.png" alt="Gmail" style={{ background: 'transparent' }} />
               <p><a href="aayus.keshri@gmail.com">aayus.keshri@gmail.com</a></p>
             </div>
             <div className="info-card">
@@ -37,8 +52,8 @@ function Contact() {
                 name="name"
                 required
               />
-              <ValidationError 
-                prefix="Name" 
+              <ValidationError
+                prefix="Name"
                 field="name"
                 errors={state.errors}
               />
@@ -52,8 +67,8 @@ function Contact() {
                 name="email"
                 required
               />
-              <ValidationError 
-                prefix="Email" 
+              <ValidationError
+                prefix="Email"
                 field="email"
                 errors={state.errors}
               />
@@ -67,8 +82,8 @@ function Contact() {
                 name="subject"
                 required
               />
-              <ValidationError 
-                prefix="Subject" 
+              <ValidationError
+                prefix="Subject"
                 field="subject"
                 errors={state.errors}
               />
@@ -82,8 +97,8 @@ function Contact() {
                 rows={6}
                 required
               ></textarea>
-              <ValidationError 
-                prefix="Message" 
+              <ValidationError
+                prefix="Message"
                 field="message"
                 errors={state.errors}
               />
